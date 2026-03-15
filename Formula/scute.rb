@@ -1,7 +1,7 @@
 class Scute < Formula
   desc "Deterministic fitness checks for your codebase"
   homepage "https://github.com/scute-sh/scute"
-  version "0.0.6"
+  version "0.0.7"
   license "Apache-2.0"
 
   BINARY_ALIASES = {
