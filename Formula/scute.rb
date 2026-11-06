@@ -1,25 +1,25 @@
 class Scute < Formula
   desc "Deterministic fitness checks for your codebase"
   homepage "https://github.com/scute-sh/scute"
-  version "0.0.15"
+  version "0.0.16"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/scute-sh/scute/releases/download/scute-v0.0.15/scute-aarch64-apple-darwin.tar.xz"
-      sha256 "78486e423300767ef06bcbdc55eee110c2c4bf4a3cf2b3c21451e6b198068203"
+      url "https://github.com/scute-sh/scute/releases/download/scute-v0.0.16/scute-aarch64-apple-darwin.tar.xz"
+      sha256 "b47d523c6465e70f45043e8efca89e6245fcf1a258987de34895604cfc7730b9"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/scute-sh/scute/releases/download/scute-v0.0.15/scute-x86_64-apple-darwin.tar.xz"
-      sha256 "0ccba892aac54b2655cb559745988628823b7a186ba372d13b13022b32cf422d"
+      url "https://github.com/scute-sh/scute/releases/download/scute-v0.0.16/scute-x86_64-apple-darwin.tar.xz"
+      sha256 "945fec446630791ce972c63d266f7e59fecb4748e1cdbaf578ed4f80fee5cb8d"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/scute-sh/scute/releases/download/scute-v0.0.15/scute-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "b4460e4e7371e14f494d4c71cfa7ba7d8f434b7b85a6bb9e7ae30e66314692a8"
+      url "https://github.com/scute-sh/scute/releases/download/scute-v0.0.16/scute-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "585f0dbf2124fb47d136c4e7fa1749ea1ee178eb15f6b64bd2b65759868c635a"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/scute-sh/scute/releases/download/scute-v0.0.15/scute-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "3c0d3722e12cfab1423a121f66c2d147cbe317b733aec556330cc212ad6509e2"
+      url "https://github.com/scute-sh/scute/releases/download/scute-v0.0.16/scute-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "3d18cf190560144f72d6ad561ead63213ee80e7afbf24e7ad8932ceb22655679"
     end
   end
   license "Apache-2.0"
@@ -52,10 +52,18 @@ class Scute < Formula
   end
 
   def install
-    bin.install "scute" if OS.mac? && Hardware::CPU.arm?
-    bin.install "scute" if OS.mac? && Hardware::CPU.intel?
-    bin.install "scute" if OS.linux? && Hardware::CPU.arm?
-    bin.install "scute" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "scute"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "scute"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "scute"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "scute"
+    end
 
     install_binary_aliases!
 
