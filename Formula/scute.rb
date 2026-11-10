@@ -1,25 +1,25 @@
 class Scute < Formula
   desc "Deterministic fitness checks for your codebase"
   homepage "https://github.com/scute-sh/scute"
-  version "0.0.17"
+  version "0.0.18"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/scute-sh/scute/releases/download/scute-v0.0.17/scute-aarch64-apple-darwin.tar.xz"
-      sha256 "eaa84f630ca1feae6f6cb6c6749e00fdb1ac0d5df17af46eb8c1e7fa0fee2547"
+      url "https://github.com/scute-sh/scute/releases/download/scute-v0.0.18/scute-aarch64-apple-darwin.tar.xz"
+      sha256 "2cb14cc396d02f0d8c071b9026d7a471a420dcd9225a5fd27ad1535bdef5a9cc"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/scute-sh/scute/releases/download/scute-v0.0.17/scute-x86_64-apple-darwin.tar.xz"
-      sha256 "58dec19d38ac4d369e541f5d302911a634b9dd0fe98b297527dc22c0679440b4"
+      url "https://github.com/scute-sh/scute/releases/download/scute-v0.0.18/scute-x86_64-apple-darwin.tar.xz"
+      sha256 "8907f5bd4d4d313863a1268d765f3b03041ecc09e99ea1452adad3f81e0b7eac"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/scute-sh/scute/releases/download/scute-v0.0.17/scute-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "7ac8e2b81808766c0ed8b291d5da4ad36f3c4c1a8f2b45b30b011082923ca9db"
+      url "https://github.com/scute-sh/scute/releases/download/scute-v0.0.18/scute-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "230d7b4f309f820fbda9c7cdcebc5ab4bfec5c6d753fbb6efbdbedc544bb8238"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/scute-sh/scute/releases/download/scute-v0.0.17/scute-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "51789b6ac8756c9e208ce0555deb12d32ea47ae88c1b32312bfa79af13209a41"
+      url "https://github.com/scute-sh/scute/releases/download/scute-v0.0.18/scute-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "d65fc1611c994b34e2cff8b06adabf9dd861eb83976fa5da2f93c70a3e10254f"
     end
   end
   license "Apache-2.0"
